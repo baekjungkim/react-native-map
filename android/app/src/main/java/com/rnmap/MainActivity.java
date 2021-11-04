@@ -1,4 +1,4 @@
-package com.pinple;
+package com.rnmap;
 
 import android.os.Bundle;
 

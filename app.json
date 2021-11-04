@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "pinple",
-    "slug": "pinple",
+    "name": "rnmap",
+    "slug": "rnmap",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "pinple"
+  "name": "rnmap"
 }

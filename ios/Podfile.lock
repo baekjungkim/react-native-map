@@ -5,8 +5,6 @@ PODS:
     - ExpoModulesCore
   - EXConstants (12.1.3):
     - ExpoModulesCore
-  - EXErrorRecovery (3.0.3):
-    - ExpoModulesCore
   - EXFileSystem (13.0.3):
     - ExpoModulesCore
   - EXFont (10.0.3):
@@ -40,6 +38,7 @@ PODS:
     - React-jsi (= 0.64.2)
     - ReactCommon/turbomodule/core (= 0.64.2)
   - glog (0.3.5)
+  - NMapsMap (3.14.0)
   - RCT-Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -233,6 +232,9 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
+  - react-native-nmap (0.0.66):
+    - NMapsMap
+    - React
   - react-native-safe-area-context (3.3.2):
     - React-Core
   - React-perflogger (0.64.2)
@@ -339,7 +341,6 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXApplication (from `../node_modules/expo-application/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
-  - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
   - EXJSONUtils (from `../node_modules/expo-json-utils/ios`)
@@ -367,6 +368,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-nmap (from `../node_modules/react-native-nmap`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -388,6 +390,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - NMapsMap
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -396,8 +399,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-application/ios"
   EXConstants:
     :path: "../node_modules/expo-constants/ios"
-  EXErrorRecovery:
-    :path: "../node_modules/expo-error-recovery/ios"
   EXFileSystem:
     :path: "../node_modules/expo-file-system/ios"
   EXFont:
@@ -448,6 +449,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-nmap:
+    :path: "../node_modules/react-native-nmap"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
@@ -488,7 +491,6 @@ SPEC CHECKSUMS:
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   EXApplication: 0e15240e4d125b62f1cae48759ffbbd32b9286a6
   EXConstants: 6d585d93723b18d7a8c283591a335609e3bc153e
-  EXErrorRecovery: ac2622400a32be84604591f70d0efff416e4b9a2
   EXFileSystem: 99aac7962c11c680681819dd9cbca24e20e5b1e7
   EXFont: 2e1c6fe726d008a039db80df95f48b4921b7fe59
   EXJSONUtils: f515cf71710855d7ba5bfc6752af3b9a6f6aad01
@@ -501,8 +503,9 @@ SPEC CHECKSUMS:
   EXUpdates: fe1380477d1e9134e2030adced1e358ffb5d12a9
   EXUpdatesInterface: e1c01b4f5ec76bd1d6cc714938f9edf5ef6379b9
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
-  FBReactNativeSpec: 73ddf93802ef8bc96d55c7a62af02e55665bb07f
+  FBReactNativeSpec: cb05af9ec287e4a968a092599ac386ace523d219
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  NMapsMap: 61c2abfc409bbcdc91583ccc455a5b6f64c7414e
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: 6d3e854f0e7260a648badd0d44fc364bc9da9728
   RCTTypeSafety: c1f31d19349c6b53085766359caac425926fafaa
@@ -514,6 +517,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
+  react-native-nmap: cfcc5402746040494c544ea90a6062f49505acdf
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
   React-perflogger: 25373e382fed75ce768a443822f07098a15ab737
   React-RCTActionSheet: af7796ba49ffe4ca92e7277a5d992d37203f7da5
@@ -532,6 +536,6 @@ SPEC CHECKSUMS:
   RNScreens: 6e1ea5787989f92b0671049b808aef64fa1ef98c
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
 
-PODFILE CHECKSUM: 116547bcf60100590e49a922e82f8a16c20d7aad
+PODFILE CHECKSUM: 28846459a70481d2bdebfa592c09369fda8c232e
 
 COCOAPODS: 1.11.2

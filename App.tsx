@@ -1,22 +1,17 @@
-import React from "react";
-import NaverMapView, {
-  Circle,
-  Marker,
-  Path,
-  Polyline,
-  Polygon,
-} from "react-native-nmap";
+import React, { useState } from "react";
+import NaverMapView from "react-native-nmap";
 
 export default function App() {
-  const P0 = { latitude: 37.564362, longitude: 126.977011 };
-  const P1 = { latitude: 37.565051, longitude: 126.978567 };
-  const P2 = { latitude: 37.565383, longitude: 126.976292 };
+  const [location, setLocation] = useState<{
+    latitude: number;
+    longitude: number;
+  }>({ latitude: 37.564362, longitude: 126.977011 });
 
   return (
     <NaverMapView
       style={{ width: "100%", height: "100%" }}
       showsMyLocationButton={true}
-      center={{ ...P0, zoom: 16 }}
+      center={{ ...location, zoom: 16 }}
       // onTouch={(e) => console.warn("onTouch", JSON.stringify(e.nativeEvent))}
       // onCameraChange={(e) => console.warn("onCameraChange", JSON.stringify(e))}
       // onMapClick={(e) => console.warn("onMapClick", JSON.stringify(e))}
